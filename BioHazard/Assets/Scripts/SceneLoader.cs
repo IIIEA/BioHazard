@@ -8,9 +8,10 @@ public class SceneLoader : MonoBehaviour
     public enum Scenes
     {
         MainMenu,
+        Settings
     }
 
-    private Scenes _scene;
+    [SerializeField] private Scenes _scene;
 
     public void LoadScene()
     {
@@ -18,6 +19,9 @@ public class SceneLoader : MonoBehaviour
         {
             case Scenes.MainMenu:
                 MainMenu.Load();
+                break;
+            case Scenes.Settings:
+                Settings.Load();
                 break;
             default:
                 break;
