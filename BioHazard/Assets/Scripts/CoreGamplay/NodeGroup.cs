@@ -1,24 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
-using System;
 using UnityEngine;
 
 public class NodeGroup : MonoBehaviour
 {
-    [SerializeField] private Color _groupColor;
-    [SerializeField] private float _speed;
-    [SerializeField] private List<Node> _nodes = new List<Node>();
+    [SerializeField] private ColorsData _colors;
 
-    public float Speed => _speed;
-    public Color GroupColor { get => _groupColor; set => _groupColor = value; }
+    private Color _groupColor;
 
-    public void AddNode(Node node)
+    public ColorList ColorList;
+
+    public Color GroupColor => _groupColor;
+
+    private void OnValidate()
     {
-
-    }
-
-    public void RemoveNode(Node node)
-    {
-
+        _groupColor = _colors.GetColorByName(ColorList.ToString());
     }
 }

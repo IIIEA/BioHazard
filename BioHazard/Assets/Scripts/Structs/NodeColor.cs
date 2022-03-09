@@ -5,8 +5,8 @@ using UnityEngine;
 public struct NodeColor
 {
     [SerializeField] private string _colorName;
-    [SerializeField] private Color _centerNodeColor;
+    [SerializeField] private Color _colorNode;
 
     public string ColorName => _colorName;
-    public Color CenterNodeColor => _centerNodeColor; 
+    public Color ColorNode => _colorNode; 
 }

@@ -2,5 +2,5 @@ public interface IPause
 {
     void Pause();
     void Resume();
-    bool IsPaused { get; set; }
+    public bool IsPause { get; set; }
 }
