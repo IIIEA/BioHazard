@@ -5,15 +5,13 @@ using UnityEngine;
 public class NodeGroup : MonoBehaviour
 {
     [SerializeField] private ColorsData _colors;
-
-    private Color _groupColor;
-
-    public ColorList ColorList;
-
-    public Color GroupColor => _groupColor;
+    [SerializeField] private ColorList _colorList;
+    [SerializeField] protected List<Node> GroupNodes = new List<Node>();
+    public Color GroupColor { get; private set; }
+    public List<Node> Nodes { get => GroupNodes; set => GroupNodes = value; }
 
     private void OnValidate()
     {
-        _groupColor = _colors.GetColorByName(ColorList.ToString());
+        GroupColor = _colors.GetColorByName(_colorList.ToString());
     }
 }

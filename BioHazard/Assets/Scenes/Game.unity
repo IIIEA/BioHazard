@@ -479,7 +479,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1396588469465360703, guid: a58a1065d165bdd4ba9c5ab037d97c83, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a58a1065d165bdd4ba9c5ab037d97c83, type: 3}
 --- !u!1 &1590880831
 GameObject:
@@ -667,7 +668,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _colors: {fileID: 11400000, guid: e7966307807bb364f82c48561a9f0d12, type: 2}
-  ColorList: 2
+  _colorList: 3
 --- !u!1 &1953711678
 GameObject:
   m_ObjectHideFlags: 0
@@ -793,6 +794,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsTrigger
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3163286860134321023, guid: a58a1065d165bdd4ba9c5ab037d97c83,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3249559102077258211, guid: a58a1065d165bdd4ba9c5ab037d97c83,
         type: 3}

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -16,6 +14,7 @@ public class NodeColorSetter : MonoBehaviour
             if(value != _group)
             {
                 _group = value;
+
                 if(_group == null)
                 {
                     OnStartColor.Invoke(Color.white);
@@ -28,9 +27,15 @@ public class NodeColorSetter : MonoBehaviour
         }
     }
 
-    private void Awake()
+    void Start()
     {
-        GetComponent<SpriteRenderer>().color = _group.GroupColor;
+        if (Group == null)
+        {
+            OnStartColor.Invoke(Color.white);
+        }
+        else
+        {
+            OnStartColor.Invoke(_group.GroupColor);
+        }
     }
-
 }
